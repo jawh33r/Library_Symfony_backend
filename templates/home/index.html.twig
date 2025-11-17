@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Library System{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold text-primary mb-3">📚 Welcome to the Library System</h1>
+        <p class="lead text-muted">Manage Books, Authors, and Borrowings easily.</p>
+    </div>
+
+    <div class="row justify-content-center g-4">
+        <!-- Books -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-book fa-3x text-info mb-3"></i>
+                    <h5 class="card-title fw-semibold">Books</h5>
+                    <p class="text-muted">Browse and manage all library books.</p>
+                    <a href="{{ path('app_book_index') }}" class="btn btn-outline-info w-100">View Books</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Authors -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-user-pen fa-3x text-warning mb-3"></i>
+                    <h5 class="card-title fw-semibold">Authors</h5>
+                    <p class="text-muted">Meet the authors behind your favorite books.</p>
+                    <a href="{{ path('app_author_index') }}" class="btn btn-outline-warning w-100">View Authors</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Borrowings -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-exchange-alt fa-3x text-success mb-3"></i>
+                    <h5 class="card-title fw-semibold">Borrowings</h5>
+                    <p class="text-muted">Track who borrowed which books.</p>
+                    <a href="{{ path('app_borrowing_index') }}" class="btn btn-outline-success w-100">View Borrowings</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Admin -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-user-shield fa-3x text-danger mb-3"></i>
+                    <h5 class="card-title fw-semibold">Admin Dashboard</h5>
+                    <p class="text-muted">Access the admin panel to manage data.</p>
+                    <a href="{{ path('admin') }}" class="btn btn-danger w-100">Go to Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

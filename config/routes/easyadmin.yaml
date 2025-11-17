@@ -1,0 +1,4 @@
+easyadmin:
+    resource: '@EasyAdminBundle/Controller/'
+    type: easyadmin.routes
+    prefix: /admin
