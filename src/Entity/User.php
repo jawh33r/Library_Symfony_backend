@@ -120,6 +120,5 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[\Deprecated]
     public function eraseCredentials(): void
     {
-        // Deprecated: clear any temporary sensitive data
     }
 }
