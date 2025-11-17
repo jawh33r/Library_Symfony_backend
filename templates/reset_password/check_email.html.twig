@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Email Sent{% endblock %}
+
+{% block body %}
+    <h1>Password Reset Email Sent</h1>
+
+    <p>
+        If an account exists with the email you entered,<br>
+        a password reset link has been sent to it.
+    </p>
+
+    <p>
+        Please check your inbox (and spam folder).
+    </p>
+
+    {% if app.request.hasPreviousSession %}
+        <a href="{{ path('app_borrowing_index') }}">Login here</a>
+    {% else %}
+        <p><em>No login route available yet.</em></p>
+    {% endif %}
+{% endblock %}
